@@ -25,12 +25,12 @@ function openInfo(div) {
             if(useTransition) {
                   setTimeout(() => {
                         appInfo.style.maxHeight = maxHeight + "px";
-                  }, 10);
+                  }, 1);
             } else {
                   setTimeout(() => {
                         appInfo.style.minHeight = 0 + "px";
                         appInfo.style.maxHeight = maxHeight + "px";
-                  }, 10);
+                  }, 1);
             }
       } else {
             appInfo.style.maxHeight = 0 + "px";
