@@ -12,24 +12,28 @@ function openInfo(div) {
       Array.from(allTabs).filter((tab) => { return tab.id != appInfo.id }).forEach((tab) => {
             if(tab.style.display.length > 0 && tab.style.display != `none`) {
                   useTransition = false;
+                  appInfo.style.minHeight = tab.clientHeight + "px";
             }
             tab.style.display = `none`;
-            tab.style.height = 0 + "px";
+            tab.style.maxHeight = 0 + "px";
       });
       if(appInfo.style.display != `block`) {
             let newWidth = grid.clientWidth;
-            let newHeight = (window.innerHeight - grid.clientHeight) / 2;
+            let maxHeight = window.innerHeight;
             appInfo.style.display = `block`;
             appInfo.style.width = newWidth + "px";
             if(useTransition) {
                   setTimeout(() => {
-                        appInfo.style.height = newHeight + "px";
+                        appInfo.style.maxHeight = maxHeight + "px";
                   }, 10);
             } else {
-                  appInfo.style.height = newHeight + "px";
+                  setTimeout(() => {
+                        appInfo.style.minHeight = 0 + "px";
+                        appInfo.style.maxHeight = maxHeight + "px";
+                  }, 10);
             }
       } else {
-            appInfo.style.height = 0 + "px";
+            appInfo.style.maxHeight = 0 + "px";
             setTimeout(() => {
                   appInfo.style.display = `none`;
             }, 500);

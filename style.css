@@ -77,17 +77,29 @@ html {
 
 .appInfo {
       display: none;
-      height: 0;
+      max-height: 0;
       background-color: white;
-      padding: calc(var(--minScreen) * 0.01);
+      padding: calc(var(--minScreen) * 0.02);
       font-size: calc(var(--minScreen) * 0.02);
+      border-radius: calc(var(--minScreen) * 0.02);
       filter: drop-shadow(calc(var(--minScreen) * 0.008) calc(var(--minScreen) * 0.008) calc(var(--minScreen) * 0.0025) rgba(50, 50, 0, 0.5));
       transition: all 0.5s ease-out;
       overflow: hidden;
+      line-height: calc(var(--minScreen) * 0.03);
+}
+
+.centerText {
+      text-align: center;
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
 }
 
 .title {
-      font-size: calc(var(--minScreen) * 0.04);
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      font-size: calc(var(--minScreen) * 0.05);
 }
 
 @font-face {
