@@ -46,7 +46,7 @@ html {
       width: calc(var(--minScreen) * 0.15);
       background: white;
       border-radius: calc(var(--minScreen) * 0.02);
-      filter: drop-shadow(6px 6px 3px rgba(50, 50, 0, 0.5));
+      filter: drop-shadow(calc(var(--minScreen) * 0.008) calc(var(--minScreen) * 0.008) calc(var(--minScreen) * 0.0025) rgba(50, 50, 0, 0.5));
       text-align: center;
       justify-content: center;
       align-content: center;
@@ -81,7 +81,7 @@ html {
       background-color: white;
       padding: calc(var(--minScreen) * 0.01);
       font-size: calc(var(--minScreen) * 0.02);
-      filter: drop-shadow(6px 6px 3px rgba(50, 50, 0, 0.5));
+      filter: drop-shadow(calc(var(--minScreen) * 0.008) calc(var(--minScreen) * 0.008) calc(var(--minScreen) * 0.0025) rgba(50, 50, 0, 0.5));
       transition: all 0.5s ease-out;
       overflow: hidden;
 }
