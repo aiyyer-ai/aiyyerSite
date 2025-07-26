@@ -5,7 +5,9 @@ window.onload = (event) => {
 
 function openInfo(div) {
       let grid = document.getElementById(`appHolder`);
-      grid.style.width = grid.clientWidth + "px";
+      if(!grid.style.width) {
+            grid.style.width = grid.clientWidth + 10 + "px";
+      }
       let appInfo = document.getElementById(`${div.id}Info`);
       let allTabs = document.querySelectorAll(".appInfo");
       let useTransition = true;
