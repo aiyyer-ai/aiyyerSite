@@ -56,6 +56,11 @@ body {
       justify-content: center;
       align-content: center;
       overflow: hidden;
+      transition: all 0.1s ease-in
+}
+
+.appIcon:hover {
+      background: lavender;
 }
 
 .appText {
@@ -83,6 +88,7 @@ body {
 .appInfo {
       display: none;
       max-height: 0;
+      min-height: 0;
       background-color: white;
       padding: calc(var(--minScreen) * 0.02);
       font-size: calc(var(--minScreen) * 0.02);
